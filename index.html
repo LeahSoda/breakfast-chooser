@@ -1,60 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh-Hant>
 <head>
-<script>
+  <meta charset="utf-8" >
+  <title>無煩惱早餐生成器</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"  href="style.css">
 
-  //the result is a maincourse + drink
-function generateMeal()
-{
-  let mainCourse='';
-  let drink='';
-
-  let num1=Math.floor(Math.random()*3);
-  let num2=Math.floor(Math.random()*4);
-
-  switch(num1)
+  <script>
+    //the result is a maincourse + drink
+  function generateMeal()
   {
-      case 0:
-          mainCourse='吐司夾蛋';
-          break;
-      case 1:
-          mainCourse='水煮蛋2顆';
-          break;
-      case 2:
-          mainCourse='堅果燕麥粥';
-          break;
-  }
+    let mainCourse='';
+    let drink='';
 
-  switch(num2)
-  {
-      case 0:
-          drink='中杯拿鐵';
-          break;
-      case 1:
-          drink='豆漿';
-          break;
-      case 2:
-          drink='牛奶';
-          break;
-      case 3:
-          drink='自己泡咖啡';
-          break;
-  }
+    let num1=Math.floor(Math.random()*3);
+    let num2=Math.floor(Math.random()*4);
 
-  document.getElementById("bt").innerHTML = `${mainCourse}+${drink}`;
-}
-</script>
+    switch(num1)
+    {
+        case 0:
+            mainCourse='吐司夾蛋';
+            break;
+        case 1:
+            mainCourse='水煮蛋2顆';
+            break;
+        case 2:
+            mainCourse='堅果燕麥粥';
+            break;
+    }
+
+    switch(num2)
+    {
+        case 0:
+            drink='中杯拿鐵';
+            break;
+        case 1:
+            drink='豆漿';
+            break;
+        case 2:
+            drink='牛奶';
+            break;
+        case 3:
+            drink='黑咖啡';
+            break;
+    }
+
+    document.getElementById("bt").innerHTML = `${mainCourse}+${drink}`;
+  }
+  </script>
 </head>
+
 <body>
 
-  <div class="">
-    <h2>懶人早餐生成器</h2>
-  </div>
-  <div class="">
-    <p id="bt">我想吃:</p>
+      <div class="row">
+        <div class="column">
+          <div class="column-icon">
+            <img src="media/icon_orange.png" class="icon" alt="icon">
+          </div>
+        </div>
+
+        <div class="column">
+          <p style="font-size:24px" class="title">早餐生成器</p>
+        </div>
+      </div>
+
+  <div>
+    <div class="content-element">
+      <p id="bt">我想吃: </p>
+      <button type="button" onclick="generateMeal()">合成！</button>
+    </div>
   </div>
 
-  <button type="button" onclick="generateMeal()">合成！</button>
 
 </body>
 </html>

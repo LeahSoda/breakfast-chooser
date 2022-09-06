@@ -1,0 +1,56 @@
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.icon{
+  height:48px;
+  width:auto;
+}
+
+/* Float the icon and 我要吃早餐side by side */
+.column{
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.title{
+  /*position:relative;*/
+  float:right;
+  top:50%;
+  left:50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.column-icon{
+  float: right;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row{
+  margin: 0 -5px;
+}
+
+/*clear floats after columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content-element{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
