@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+  //the result is a maincourse + drink
+function generateMeal()
+{
+  let mainCourse='';
+  let drink='';
+
+  let num1=Math.floor(Math.random()*3);
+  let num2=Math.floor(Math.random()*4);
+
+  switch(num1)
+  {
+      case 0:
+          mainCourse='吐司夾蛋';
+          break;
+      case 1:
+          mainCourse='水煮蛋2顆';
+          break;
+      case 2:
+          mainCourse='堅果燕麥粥';
+          break;
+  }
+
+  switch(num2)
+  {
+      case 0:
+          drink='中杯拿鐵';
+          break;
+      case 1:
+          drink='豆漿';
+          break;
+      case 2:
+          drink='牛奶';
+          break;
+      case 3:
+          drink='自己泡咖啡';
+          break;
+  }
+
+  document.getElementById("bt").innerHTML = `${mainCourse}+${drink}`;
+}
+</script>
+</head>
+<body>
+
+  <div class="">
+    <h2>懶人早餐生成器</h2>
+  </div>
+  <div class="">
+    <p id="bt">我想吃:</p>
+  </div>
+
+  <button type="button" onclick="generateMeal()">合成！</button>
+
+</body>
+</html>
